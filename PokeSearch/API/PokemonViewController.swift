@@ -23,6 +23,9 @@ class PokemonViewController: ObservableObject {
         getPokemon()
     }
     
+    /**
+     Function that controls the loading of more pokemon
+     */
     func loadMorePokemon(currentPokemon: Pokemon) {
         if keepGoing {
             offset += 20
@@ -30,6 +33,9 @@ class PokemonViewController: ObservableObject {
         }
     }
     
+    /**
+     This function retrieves all of the pokemon from the url and adds them to the pokemon array
+     */
     func getPokemon() {
         pokemonAPI.getPokemonList(url: "https://pokeapi.co/api/v2/pokemon/?offset=\(offset)") { (pokemonList) in
             if (pokemonList.results.count < 20) {

@@ -140,6 +140,20 @@ struct Sprite: Codable, Hashable {
     var back_shiny: String?
     var back_female: String?
     var back_shiny_female: String?
+    var other: Other?
+}
+
+// MARK: - Other
+struct Other: Codable, Hashable {
+    let officialArtwork: OfficialArtwork
+
+    enum CodingKeys: String, CodingKey {
+        case officialArtwork = "official-artwork"
+    }
+}
+
+struct OfficialArtwork: Codable, Hashable {
+    var front_default: String?
 }
 
 struct Stats: Codable {

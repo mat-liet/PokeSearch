@@ -18,7 +18,8 @@ struct PokemonView: View {
     var pokemonAPI = PokemonAPI()
     var body: some View {
         HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/, content: {
-            KFImage(URL(string: individualPokemon.sprites.front_default ?? "https://upload.wikimedia.org/wikipedia/commons/3/39/Pokeball.PNG")) // ----FIX THIS
+            KFImage(URL(string: (individualPokemon.sprites.other?.officialArtwork.front_default  ??             individualPokemon.sprites.front_default) ??
+                    "https://upload.wikimedia.org/wikipedia/commons/3/39/Pokeball.PNG"))
                 .cacheOriginalImage()
                 .resizable()
                 .scaledToFit()
@@ -29,6 +30,7 @@ struct PokemonView: View {
                 HStack {
                     Text(individualPokemon.name.firstUppercased)
                         .foregroundColor(Color.black)
+                        .font(Font.custom("Pokemon Hollow", size: 20))
                 }
             })
         })

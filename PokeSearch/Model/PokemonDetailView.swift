@@ -18,13 +18,14 @@ struct PokemonDetailView: View {
             VStack() {
                 Spacer()
                     .frame(height: 50)
-                KFImage(URL(string: pokemon.sprites.front_default ?? "https://upload.wikimedia.org/wikipedia/commons/3/39/Pokeball.PNG"))
+                KFImage(URL(string: (pokemon.sprites.other?.officialArtwork.front_default  ??             pokemon.sprites.front_default) ??
+                        "https://upload.wikimedia.org/wikipedia/commons/3/39/Pokeball.PNG"))
                     .resizable()
                     .cacheOriginalImage()
                     .frame(width: 200, height: 200)
                 VStack{
                     Spacer()
-                        .frame(height: 10)
+                        .frame(height: 20)
                     Text("Pokemon Information")
                         .font(.title)
                     Spacer()
