@@ -26,12 +26,12 @@ struct PokemonView: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 80.0, height: 80.0, alignment: .center)
-                .foregroundColor(.orange)
                 .padding(.all, 20)
             
             VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/, content: {
                 HStack {
                     Text(individualPokemon.name.firstUppercased)
+                        .foregroundColor(Color.black)
                 }
             })
         })

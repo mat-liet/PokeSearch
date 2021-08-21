@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var pokemons: [Pokemon]
-    
+    @StateObject var pokemonController = PokemonViewController()
+    let pokemonAPI = PokemonAPI()
+    // Partially taken from: https://apoorv487.medium.com/pagination-in-swiftui-5a90ea952876
     var body: some View {
             NavigationView {
-                List(pokemons) { pokemon in
-                    NavigationLink(destination: PokemonDetailView(pokemon: pokemon)) {
-                        PokemonView(individualPokemon: pokemon)
+                ScrollView {
+                    LazyVStack {
+                        ForEach(pokemonController.pokemon, id: \.self) { pokemon in
+                            NavigationLink(destination: PokemonDetailView(pokemon: pokemon)) {
+                                PokemonView(individualPokemon: pokemon)
+                                    .onAppear(){
+                                        pokemonController.loadMorePokemon(currentPokemon: pokemon)
+                                    }
+                            }
+                            
+                        }
                     }
                 }
                 .navigationBarTitle("Pokemon", displayMode: .inline)

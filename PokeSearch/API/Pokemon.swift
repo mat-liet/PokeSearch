@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 /**
  This class will contain all of the structs required to parse the JSON.
@@ -23,12 +24,13 @@ struct PokemonOverview: Codable {
     let url: String!
 }
 
-struct Pokemon: Identifiable, Decodable {
+//MARK: - Pokemon
+struct Pokemon: Decodable, Hashable {
 //    var abilities: [Ability]
 //    var base_experience: Int
 //    var forms: [PokemonOverview]
 //    var game_indices: [GameIndex]
-//    var height: Int
+    var height: Int
 //    var held_items: [HeldItem]
     var id: Int
 //    var is_default: Bool
@@ -41,7 +43,7 @@ struct Pokemon: Identifiable, Decodable {
     var sprites: Sprite
 //    var stats: [Stats]
     var types: [Type]
-//    var weight: Int
+    var weight: Int
 }
 
 struct Ability: Codable {
@@ -112,12 +114,12 @@ struct Generation: Codable {
     var url: String
 }
 
-struct Type: Codable {
+struct Type: Codable, Hashable {
     var slot: Int?
     var type: SingleType?
 }
 
-struct SingleType: Codable {
+struct SingleType: Codable, Hashable {
     var name: String?
     var url: String?
 }
@@ -127,7 +129,7 @@ struct Species: Codable {
     var url: String
 }
 
-struct Sprite: Codable {
+struct Sprite: Codable, Hashable {
     var front_default: String?
     var front_shiny: String?
     var front_female: String?
