@@ -38,7 +38,7 @@ struct Pokemon: Identifiable, Decodable {
 //    var order: Int
 //    var past_types: [PastTypes]
 //    var species: Species
-//    var sprites: Sprite
+    var sprites: Sprite
 //    var stats: [Stats]
     var types: [Type]
 //    var weight: Int
@@ -114,11 +114,11 @@ struct Generation: Codable {
 
 struct Type: Codable {
     var slot: Int?
-    var type: SingleType
+    var type: SingleType?
 }
 
 struct SingleType: Codable {
-    var name: String
+    var name: String?
     var url: String?
 }
 

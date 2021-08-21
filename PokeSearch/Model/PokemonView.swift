@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 // taken from: https://stackoverflow.com/questions/26306326/swift-apply-uppercasestring-to-only-the-first-letter-of-a-string
 extension StringProtocol {
@@ -13,12 +14,15 @@ extension StringProtocol {
     var firstCapitalized: String { prefix(1).capitalized + dropFirst() }
 }
 
+/**
+ This view represents a pokemon in a list.
+ */
 struct PokemonView: View {
     var individualPokemon: Pokemon
     var pokemonAPI = PokemonAPI()
     var body: some View {
         HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/, content: {
-            Image("Pokeball")
+            KFImage(URL(string: individualPokemon.sprites.front_default!))
                 .resizable()
                 .scaledToFit()
                 .frame(width: 80.0, height: 80.0, alignment: .center)
