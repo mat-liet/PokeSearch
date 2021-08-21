@@ -54,6 +54,7 @@ struct Ability: Codable, Hashable {
 }
 
 struct SingleAbility: Codable, Hashable {
+    
     var name: String
     var url: String
 }

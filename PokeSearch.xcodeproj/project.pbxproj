@@ -20,6 +20,7 @@
 		A16559BB26D14A390026B713 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A16559BA26D14A390026B713 /* Kingfisher */; };
 		A16559BD26D160320026B713 /* PokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16559BC26D160320026B713 /* PokemonViewController.swift */; };
 		A16559BF26D186BD0026B713 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16559BE26D186BD0026B713 /* StringExtension.swift */; };
+		A16559C126D18A6D0026B713 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16559C026D18A6D0026B713 /* Search.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		A16559B726D105500026B713 /* PokemonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailView.swift; sourceTree = "<group>"; };
 		A16559BC26D160320026B713 /* PokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewController.swift; sourceTree = "<group>"; };
 		A16559BE26D186BD0026B713 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		A16559C026D18A6D0026B713 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			children = (
 				A16559B126D0FD110026B713 /* PokemonView.swift */,
 				A16559B726D105500026B713 /* PokemonDetailView.swift */,
+				A16559C026D18A6D0026B713 /* Search.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A16559C126D18A6D0026B713 /* Search.swift in Sources */,
 				A11C8AD726CECDB000ED6E8E /* ContentView.swift in Sources */,
 				A11C8AD526CECDB000ED6E8E /* PokeSearchApp.swift in Sources */,
 				A11C8B0426CECE8C00ED6E8E /* PokemonAPI.swift in Sources */,
