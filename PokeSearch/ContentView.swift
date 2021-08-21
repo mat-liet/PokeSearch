@@ -9,9 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var pokemonController = PokemonViewController()
+    @Binding var searchName: String
     // Partially taken from: https://apoorv487.medium.com/pagination-in-swiftui-5a90ea952876
     var body: some View {
             NavigationView {
+                TextField("", text: $searchName)
                 ScrollView {
                     LazyVStack {
                         ForEach(pokemonController.pokemon, id: \.self) { pokemon in

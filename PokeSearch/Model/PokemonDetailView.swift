@@ -19,13 +19,24 @@ struct PokemonDetailView: View {
                 KFImage(URL(string: pokemon.sprites.front_default!))
                     .resizable()
                     .frame(width: 200, height: 200)
-                Spacer()
-                Text("Pokemon type: " + (pokemon.types[0].type?.name!.firstUppercased)!)
-                Spacer()
-                Text("Height of pokemon in decimetres: " + String(pokemon.height))
-                Spacer()
-                Text("Weight of pokemon in hectograms: " + String(pokemon.weight))
-                Spacer()
+                VStack{
+                    Spacer()
+                        .frame(height: 10)
+                    Text("Pokemon Information:")
+                        .font(.title)
+                    Spacer()
+                    Text("Pokemon type: " + (pokemon.types[0].type?.name!.firstUppercased)!)
+                    Text("Height of pokemon in decimetres: " + String(pokemon.height))
+                    Text("Weight of pokemon in hectograms: " + String(pokemon.weight))
+                    Spacer()
+                }
+                Text("Pokemon Abilities")
+                    .font(.title)
+                VStack {
+                    ForEach(pokemon.abilities, id: \.self) { ability in
+                        Text("\u{2022} " + ability.ability.name.firstUppercased)
+                    }
+                }
             }
             Spacer()
         }

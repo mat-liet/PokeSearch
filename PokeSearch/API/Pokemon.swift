@@ -10,6 +10,7 @@ import Foundation
 
 /**
  This class will contain all of the structs required to parse the JSON.
+ Majority of these structs were generated using quickType (iOS app that generates JSON structures)
  */
 // MARK: - PokemonList
 struct PokemonList: Codable {
@@ -26,7 +27,7 @@ struct PokemonOverview: Codable {
 
 //MARK: - Pokemon
 struct Pokemon: Decodable, Hashable {
-//    var abilities: [Ability]
+    var abilities: [Ability]
 //    var base_experience: Int
 //    var forms: [PokemonOverview]
 //    var game_indices: [GameIndex]
@@ -46,13 +47,13 @@ struct Pokemon: Decodable, Hashable {
     var weight: Int
 }
 
-struct Ability: Codable {
+struct Ability: Codable, Hashable {
     var ability: SingleAbility
     var is_hidden: Bool
     var slot: Int
 }
 
-struct SingleAbility: Codable {
+struct SingleAbility: Codable, Hashable {
     var name: String
     var url: String
 }

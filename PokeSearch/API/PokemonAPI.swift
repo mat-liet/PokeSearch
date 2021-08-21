@@ -79,4 +79,6 @@ class PokemonAPI {
             return Color(red: 238/255, green: 153/255, blue: 172/255) //fairy
         }
     }
+    
+    
 }

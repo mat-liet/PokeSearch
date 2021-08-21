@@ -19,6 +19,7 @@
 		A16559B826D105500026B713 /* PokemonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16559B726D105500026B713 /* PokemonDetailView.swift */; };
 		A16559BB26D14A390026B713 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A16559BA26D14A390026B713 /* Kingfisher */; };
 		A16559BD26D160320026B713 /* PokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16559BC26D160320026B713 /* PokemonViewController.swift */; };
+		A16559BF26D186BD0026B713 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16559BE26D186BD0026B713 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		A16559B126D0FD110026B713 /* PokemonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonView.swift; sourceTree = "<group>"; };
 		A16559B726D105500026B713 /* PokemonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailView.swift; sourceTree = "<group>"; };
 		A16559BC26D160320026B713 /* PokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewController.swift; sourceTree = "<group>"; };
+		A16559BE26D186BD0026B713 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				A11C8B0026CECE5700ED6E8E /* Pokemon.swift */,
 				A11C8B0326CECE8C00ED6E8E /* PokemonAPI.swift */,
 				A16559BC26D160320026B713 /* PokemonViewController.swift */,
+				A16559BE26D186BD0026B713 /* StringExtension.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				A11C8AD526CECDB000ED6E8E /* PokeSearchApp.swift in Sources */,
 				A11C8B0426CECE8C00ED6E8E /* PokemonAPI.swift in Sources */,
 				A16559B226D0FD110026B713 /* PokemonView.swift in Sources */,
+				A16559BF26D186BD0026B713 /* StringExtension.swift in Sources */,
 				A16559B826D105500026B713 /* PokemonDetailView.swift in Sources */,
 				A16559BD26D160320026B713 /* PokemonViewController.swift in Sources */,
 				A11C8B0126CECE5700ED6E8E /* Pokemon.swift in Sources */,
