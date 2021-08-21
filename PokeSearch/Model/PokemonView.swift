@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+// taken from: https://stackoverflow.com/questions/26306326/swift-apply-uppercasestring-to-only-the-first-letter-of-a-string
+extension StringProtocol {
+    var firstUppercased: String { prefix(1).uppercased() + dropFirst() }
+    var firstCapitalized: String { prefix(1).capitalized + dropFirst() }
+}
+
 struct PokemonView: View {
     var individualPokemon: Pokemon
     var body: some View {
