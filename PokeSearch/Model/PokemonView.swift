@@ -15,6 +15,7 @@ extension StringProtocol {
 
 struct PokemonView: View {
     var individualPokemon: Pokemon
+    var pokemonAPI = PokemonAPI()
     var body: some View {
         HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/, content: {
             Image("Pokeball")
@@ -31,10 +32,12 @@ struct PokemonView: View {
             })
         })
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .leading)
-        .background(Color.blue)
+        .background(pokemonAPI.getPokemonColor(pokemon: individualPokemon))
         .cornerRadius(10.0)
         .shadow(color: Color.black.opacity(0.2), radius: 2, x: 0, y: 0)
         .padding(.horizontal, 10)
         .padding(.vertical, 5)
     }
 }
+
+

@@ -40,13 +40,8 @@ struct Pokemon: Identifiable, Decodable {
 //    var species: Species
 //    var sprites: Sprite
 //    var stats: [Stats]
-//    var types: [Type]
+    var types: [Type]
 //    var weight: Int
-    
-    enum CodingKeys: String, CodingKey {
-           case id = "id"
-           case name = "name"
-       }
 }
 
 struct Ability: Codable {
@@ -118,13 +113,13 @@ struct Generation: Codable {
 }
 
 struct Type: Codable {
-    var slot: Int
+    var slot: Int?
     var type: SingleType
 }
 
 struct SingleType: Codable {
     var name: String
-    var url: String
+    var url: String?
 }
 
 struct Species: Codable {

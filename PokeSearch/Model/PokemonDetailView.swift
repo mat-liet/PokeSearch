@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct PokemonDetailView: View {
-    
     let pokemon: Pokemon
+    let pokemonAPI = PokemonAPI()
     
     var body: some View {
         VStack {
@@ -17,7 +17,7 @@ struct PokemonDetailView: View {
             Spacer()
             Text(String(pokemon.id))
             Spacer()
-            Text(pokemon.name)
-        }
+        }.background(pokemonAPI.getPokemonColor(pokemon: pokemon))
+        .navigationBarTitle(Text(pokemon.name.firstUppercased), displayMode: .inline)
     }
 }

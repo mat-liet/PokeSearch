@@ -17,7 +17,7 @@ struct ContentView: View {
                         PokemonView(individualPokemon: pokemon)
                     }
                 }
-                .navigationBarTitle("Pokemon")
+                .navigationBarTitle("Pokemon", displayMode: .inline)
             }
         }
 }
