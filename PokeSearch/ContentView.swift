@@ -7,39 +7,43 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @State var pokemons: [Pokemon]
-    var body: some View {
-        NavigationView{
-            List(pokemons){
-                pokemon in ListRow(individualPokemon: pokemon)
-            }.navigationBarTitle(Text("PokeSearch"), displayMode: .inline)
-        }.onAppear(){
-            PokemonAPI().getPokemonList { (pokemonList) in
-//                print(pokemonList.results)
-                for pokemon in pokemonList.results {
-                    PokemonAPI().getPokemonInfo(url: pokemon.url) { (pokemonDetail) in
-                        pokemons.append(pokemonDetail)
-//                        print(pokemonDetail.id)
-//                        print(output)
-                    }
-                }
-            }
-            
-        }
-    }
+// taken from: https://stackoverflow.com/questions/26306326/swift-apply-uppercasestring-to-only-the-first-letter-of-a-string
+extension StringProtocol {
+    var firstUppercased: String { prefix(1).uppercased() + dropFirst() }
+    var firstCapitalized: String { prefix(1).capitalized + dropFirst() }
 }
 
-struct ListRow: View {
-    var individualPokemon: Pokemon
+struct ContentView: View {
+    @ObservedObject var pokemonData = PokemonData()
+    @State var pokemons: [Pokemon]
+//    var body: some View {
+//        NavigationView{
+//            List(pokemons){
+//                pokemon in ListRow(individualPokemon: pokemon)
+//            }.navigationBarTitle(Text("PokeSearch"), displayMode: .inline)
+//        }.onAppear(){
+//            pokemonData.fetchMembers()
+//        }
+//    }
+    
     var body: some View {
-        HStack{
-            Text(individualPokemon.name)
-            Spacer()
-//            Image("Pokeball")
-//                .resizable()
-//                .aspectRatio(contentMode: .fit)
-//                .frame(maxWidth: 30)
-        }.frame(height: 100)
-    }
+            NavigationView {
+                List {
+                    // 1. Members
+                    ForEach(pokemonData.members) { member in
+                        PokemonView(individualPokemon: member)
+                            
+                    }
+                    Button("Button title") {
+                        print("Button tapped!")
+                    }
+                    .onAppear() {
+                        pokemonData.fetchMembers()
+                    }
+                
+                }
+                
+                .navigationBarTitle("Members")
+            }
+        }
 }

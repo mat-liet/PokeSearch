@@ -10,16 +10,17 @@ import SwiftUI
 /**
  This class will contain all of the structs required to parse the JSON.
  */
+// MARK: - PokemonList
 struct PokemonList: Codable {
-    var count: Int
-    var next: String?
-    var previous: String?
-    var results: [PokemonOverview]
+    let count: Int!
+    let next, previous: String!
+    let results: [PokemonOverview]!
 }
 
+// MARK: - PokemonOverview
 struct PokemonOverview: Codable {
-    var name: String
-    var url: String
+    let name: String!
+    let url: String!
 }
 
 struct Pokemon: Identifiable, Decodable {
