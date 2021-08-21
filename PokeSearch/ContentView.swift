@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var pokemonController = PokemonViewController()
-    let pokemonAPI = PokemonAPI()
     // Partially taken from: https://apoorv487.medium.com/pagination-in-swiftui-5a90ea952876
     var body: some View {
             NavigationView {
