@@ -21,8 +21,6 @@
 		A16559BD26D160320026B713 /* PokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16559BC26D160320026B713 /* PokemonViewController.swift */; };
 		A16559BF26D186BD0026B713 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16559BE26D186BD0026B713 /* StringExtension.swift */; };
 		A16559C126D18A6D0026B713 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16559C026D18A6D0026B713 /* Search.swift */; };
-		A16559C426D1B03C0026B713 /* Pokemon Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A16559C226D1B03C0026B713 /* Pokemon Solid.ttf */; };
-		A16559C526D1B03C0026B713 /* Pokemon Hollow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A16559C326D1B03C0026B713 /* Pokemon Hollow.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,8 +58,6 @@
 		A16559BC26D160320026B713 /* PokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewController.swift; sourceTree = "<group>"; };
 		A16559BE26D186BD0026B713 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		A16559C026D18A6D0026B713 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
-		A16559C226D1B03C0026B713 /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
-		A16559C326D1B03C0026B713 /* Pokemon Hollow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Hollow.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +131,6 @@
 			children = (
 				A16559B126D0FD110026B713 /* PokemonView.swift */,
 				A10D4FBF26D2BC220033639D /* PKMN RBYGSC.ttf */,
-				A16559C326D1B03C0026B713 /* Pokemon Hollow.ttf */,
-				A16559C226D1B03C0026B713 /* Pokemon Solid.ttf */,
 				A16559B726D105500026B713 /* PokemonDetailView.swift */,
 				A16559C026D18A6D0026B713 /* Search.swift */,
 				A10D4FBD26D275E80033639D /* PokemonStatsView.swift */,
@@ -265,8 +259,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A10D4FC026D2BC220033639D /* PKMN RBYGSC.ttf in Resources */,
-				A16559C526D1B03C0026B713 /* Pokemon Hollow.ttf in Resources */,
-				A16559C426D1B03C0026B713 /* Pokemon Solid.ttf in Resources */,
 				A11C8ADC26CECDB100ED6E8E /* Preview Assets.xcassets in Resources */,
 				A11C8AD926CECDB100ED6E8E /* Assets.xcassets in Resources */,
 			);

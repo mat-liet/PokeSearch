@@ -24,6 +24,7 @@ struct ContentView: View {
                         ForEach(pokemonController.pokemon.filter { test in
                             self.searchName.isEmpty ? true : test.name.lowercased().contains(self.searchName.lowercased())
                         }, id: \.self) { pokemon in
+                            // NavigationLink to show the detail page on click
                             NavigationLink(destination: PokemonDetailView(pokemon: pokemon)) {
                                 PokemonView(individualPokemon: pokemon)
                                     .onAppear() {
