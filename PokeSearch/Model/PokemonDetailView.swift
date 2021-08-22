@@ -29,7 +29,7 @@ struct PokemonDetailView: View {
                     .frame(width: 200, height: 200)
                 VStack{
                     Spacer()
-                        .frame(height: 20)
+                        .frame(height: 25)
                     Text("Pokemon Information")
                         .font(.title)
                     Spacer()
@@ -44,16 +44,26 @@ struct PokemonDetailView: View {
                     Spacer()
                         .frame(height: 25)
                 }
-                Text("Pokemon Abilities")
-                    .font(.title)
-                Spacer()
-                    .frame(height: 25)
+                
                 VStack {
+                    Text("Pokemon Abilities")
+                        .font(.title)
+                    Spacer()
+                        .frame(height: 25)
                     ForEach(pokemon.abilities, id: \.self) { ability in
                         Text("\u{2022} " + ability.ability.name.firstUppercased)
                         Spacer()
                             .frame(height: 5)
                     }
+                }
+                
+                VStack {
+                    Spacer()
+                        .frame(height: 20)
+                    Text("Pokemon Stats")
+                        .font(.title)
+                    Spacer()
+                        .frame(height: 25)
                 }
                 Spacer()
             }
@@ -61,6 +71,7 @@ struct PokemonDetailView: View {
         }
         .background(pokemonAPI.getPokemonColor(pokemon: pokemon))
         .navigationBarTitle(Text(pokemon.name.firstUppercased), displayMode: .inline)
+        .border(Color.black)
         
     }
 }

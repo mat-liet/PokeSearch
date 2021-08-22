@@ -28,109 +28,41 @@ struct PokemonOverview: Codable {
 //MARK: - Pokemon
 struct Pokemon: Decodable, Hashable {
     var abilities: [Ability]
-//    var base_experience: Int
-//    var forms: [PokemonOverview]
-//    var game_indices: [GameIndex]
     var height: Int
-//    var held_items: [HeldItem]
     var id: Int
-//    var is_default: Bool
-//    var location_area_encounters: String
-//    var moves: [Move]
     var name: String
-//    var order: Int
-//    var past_types: [PastTypes]
-//    var species: Species
     var sprites: Sprite
-//    var stats: [Stats]
+    var stats: [Stats]
     var types: [Type]
     var weight: Int
 }
 
+// MARK: - Ability
 struct Ability: Codable, Hashable {
     var ability: SingleAbility
     var is_hidden: Bool
     var slot: Int
 }
 
+// MARK: - Single Ability
 struct SingleAbility: Codable, Hashable {
-    
     var name: String
     var url: String
 }
 
-struct GameIndex:  Codable{
-    var game_index: Int
-    var version: Version
-}
-
-struct Version: Codable {
-    var name: String
-    var url: String
-}
-
-
-struct HeldItem: Codable {
-    var item: Item
-    var version_details: [VersionDetail]
-}
-
-struct Item: Codable {
-    var name: String
-    var url: String
-}
-
-struct VersionDetail: Codable {
-    var rarity: Int
-    var version: Version
-}
-
-struct Move: Codable {
-    var move: SingleMove
-    var version_group_details: [VersionGroupDetail]
-}
-
-struct SingleMove: Codable {
-    var name: String
-    var url: String
-}
-
-struct VersionGroupDetail: Codable {
-    var level_learned_at: Int
-    var move_learn_method: SingleMove
-    var version_group: VersionGroup
-}
-
-struct VersionGroup: Codable {
-    var name: String
-    var url: String
-}
-
-struct PastTypes: Codable {
-    var generation: Generation
-    var types: [Type]
-}
-
-struct Generation: Codable {
-    var name: String
-    var url: String
-}
-
+// MARK: - Type
 struct Type: Codable, Hashable {
     var slot: Int?
     var type: SingleType?
 }
 
+// MARK: - Single Type
 struct SingleType: Codable, Hashable {
     var name: String?
     var url: String?
 }
 
-struct Species: Codable {
-    var name: String
-    var url: String
-}
-
+// MARK: - Sprite
 struct Sprite: Codable, Hashable {
     var front_default: String?
     var front_shiny: String?
@@ -152,17 +84,20 @@ struct Other: Codable, Hashable {
     }
 }
 
+// MARK: - Official Artwork
 struct OfficialArtwork: Codable, Hashable {
     var front_default: String?
 }
 
-struct Stats: Codable {
+// MARK: - Stats
+struct Stats: Codable, Hashable {
     var base_stat: Int
     var effort: Int
     var stat: Stat
 }
 
-struct Stat: Codable {
+// MARK: - Stat
+struct Stat: Codable, Hashable {
     var name: String
     var url: String
 }
