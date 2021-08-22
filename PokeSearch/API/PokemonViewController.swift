@@ -13,7 +13,10 @@ import SwiftUI
  */
 class PokemonViewController: ObservableObject {
     
+    // Array that will be updated with more pokemon
     @Published var pokemon: [Pokemon] = []
+    
+    // Used to retrieve and decode JSON
     var pokemonAPI = PokemonAPI()
     
     // What # of pokemon we are at

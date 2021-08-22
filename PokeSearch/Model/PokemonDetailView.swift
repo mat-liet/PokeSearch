@@ -8,6 +8,7 @@
 import SwiftUI
 import Kingfisher
 
+// Reference for Kingfisher: https://github.com/onevcat/Kingfisher
 /**
  This class displays the Pokemon Details including height, weight and their abilities.
  For the image, get the official artwork, and then if not get the game sprite. Lastly, get a placeholder if it doesnt work.

@@ -17,6 +17,8 @@ class PokemonAPI {
     /**
      This method takes a url and returns a PokemonList object. The PokemonList object contains a [Result] that
      lists 20 pokemon and their URLs.
+     Parameter: String containing the url
+     Return: PokemonList object decoded from JSON
      */
     func getPokemonList(url: String, completion: @escaping (PokemonList) -> ()) {
         guard let url = URL(string: url) else {return}
@@ -43,6 +45,8 @@ class PokemonAPI {
     /**
      This method returns a Pokemon object by using the JSONDecoder
      Catches errors so that the app does not crash
+     Parameter: String containing the url
+     Return: Pokemon object decoded from JSON
      */
     func getPokemonInfo(url: String, completion: @escaping (Pokemon) -> ()) {
         guard let url = URL(string: url) else {return}
@@ -68,6 +72,8 @@ class PokemonAPI {
     
     /**
      This function retrieves the color of the pokemon depending on the type.
+     Parameter: Pokemon object that will be used to determine color
+     Return: Color object
      */
     func getPokemonColor(pokemon: Pokemon) -> Color {
         switch pokemon.types[0].type?.name {

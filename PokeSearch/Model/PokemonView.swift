@@ -8,7 +8,7 @@
 import SwiftUI
 import Kingfisher
 
-
+// Reference for Kingfisher: https://github.com/onevcat/Kingfisher
 
 /**
  This view represents a pokemon in a list.
