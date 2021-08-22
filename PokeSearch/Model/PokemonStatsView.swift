@@ -54,6 +54,11 @@ struct PokemonStatsView: View {
         
 }
 
+/**
+ This function gets the base stat for the given stat name and pokemon.
+ Parameter: stat is the name of the stat and the pokemon given is the pokemon whose stat it belongs to
+ Return: string of the base_stat
+ */
 func getStat(stat: String, pokemon: Pokemon) -> (String) {
     var statResult = ""
     for stats in pokemon.stats {

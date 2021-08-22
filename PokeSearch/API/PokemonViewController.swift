@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 /**
+ Class controls the loading of more pokemon into the PokemonListView
  Reference for this class: https://apoorv487.medium.com/pagination-in-swiftui-5a90ea952876
  */
 class PokemonViewController: ObservableObject {

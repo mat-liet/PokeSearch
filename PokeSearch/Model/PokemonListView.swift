@@ -9,6 +9,8 @@ import SwiftUI
 
 /**
  This is the list view for the Pokemon.
+ This view creates the search bar and the list of all the pokemon. Using the PokemonViewController to
+ load more pokemon when needed.
  */
 struct PokemonListView: View {
     @StateObject var pokemonController = PokemonViewController()
