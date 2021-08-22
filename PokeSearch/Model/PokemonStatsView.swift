@@ -16,6 +16,12 @@ struct PokemonStatsView: View {
     
     var body: some View {
         VStack(alignment: .center) {
+            Spacer()
+                .frame(height: 20)
+            Text("Pokemon Stats")
+                .font(Font.custom("PKMN RBYGSC", size: 20))
+            Spacer()
+                .frame(height: 25)
             HStack(spacing: 50) {
                 VStack(alignment: .leading) {
                     Text("HP: " + getStat(stat: "hp", pokemon: pokemon))
@@ -44,7 +50,6 @@ struct PokemonStatsView: View {
                 }
             }
         }
-//        .foregroundColor(pokemonColor)
     }
         
 }

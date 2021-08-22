@@ -30,54 +30,16 @@ struct PokemonDetailView: View {
                         .frame(width: 200, height: 200)
                     Divider()
                     // MARK: - Pokemon Information
-                    VStack(){
-                        Spacer()
-                            .frame(height: 25)
-                        Text("Pokemon Information")
-                            .font(Font.custom("PKMN RBYGSC", size: 20))
-                        Spacer()
-                            .frame(height: 25)
-                        Text("Pokemon type: " + (pokemon.types[0].type?.name!.firstUppercased)!)
-                            .font(Font.custom("PKMN RBYGSC", size: 12))
-                        Spacer()
-                            .frame(height: 10)
-                        Text("Height of pokemon in decimetres: " + String(pokemon.height))
-                            .font(Font.custom("PKMN RBYGSC", size: 12))
-                        Spacer()
-                            .frame(height: 10)
-                        Text("Weight of pokemon in hectograms: " + String(pokemon.weight))
-                            .font(Font.custom("PKMN RBYGSC", size: 12))
-                        Spacer()
-                            .frame(height: 25)
-                    }
+                    PokemonInformationView(pokemon: pokemon)
                     
                     Divider()
                     // MARK: - Pokemon Abilities
-                    VStack() {
-                        Text("Pokemon Abilities")
-                            .font(Font.custom("PKMN RBYGSC", size: 20))
-                        Spacer()
-                            .frame(height: 25)
-                        ForEach(pokemon.abilities, id: \.self) { ability in
-                            Text("\u{2022} " + ability.ability.name.firstUppercased)
-                                .font(Font.custom("PKMN RBYGSC", size: 12))
-                            Spacer()
-                                .frame(height: 10)
-                        }
-                    }
+                    PokemonAbilityView(pokemon: pokemon)
                     
                     Divider()
                     // MARK: - Pokemon Stats
-                    VStack() {
-                        Spacer()
-                            .frame(height: 20)
-                        Text("Pokemon Stats")
-                            .font(Font.custom("PKMN RBYGSC", size: 20))
-                        Spacer()
-                            .frame(height: 25)
-                        
-                        PokemonStatsView(pokemon: pokemon, pokemonColor: pokemonAPI.getPokemonColor(pokemon: pokemon))
-                    }
+                    PokemonStatsView(pokemon: pokemon, pokemonColor: pokemonAPI.getPokemonColor(pokemon: pokemon))
+                
                     Spacer()
                 }
                 Spacer()
