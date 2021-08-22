@@ -10,7 +10,6 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var pokemonController = PokemonViewController()
     @State var searchName: String = ""
-    @State var testArr = []
     // Partially taken from: https://apoorv487.medium.com/pagination-in-swiftui-5a90ea952876
     var body: some View {
             NavigationView {
