@@ -8,6 +8,10 @@
 import SwiftUI
 import Kingfisher
 
+/**
+ This class displays the Pokemon Details including height, weight and their abilities.
+ For the image, get the official artwork, and then if not get the game sprite. Lastly, get a placeholder if it doesnt work.
+ */
 struct PokemonDetailView: View {
     let pokemon: Pokemon
     let pokemonAPI = PokemonAPI()
@@ -18,7 +22,7 @@ struct PokemonDetailView: View {
             VStack() {
                 Spacer()
                     .frame(height: 50)
-                KFImage(URL(string: (pokemon.sprites.other?.officialArtwork.front_default  ??             pokemon.sprites.front_default) ??
+                KFImage.url(URL(string: (pokemon.sprites.other?.officialArtwork.front_default  ?? pokemon.sprites.front_default) ??
                         "https://upload.wikimedia.org/wikipedia/commons/3/39/Pokeball.PNG"))
                     .resizable()
                     .cacheOriginalImage()

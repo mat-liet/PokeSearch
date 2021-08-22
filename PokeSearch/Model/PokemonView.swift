@@ -18,7 +18,9 @@ struct PokemonView: View {
     var pokemonAPI = PokemonAPI()
     var body: some View {
         HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/, content: {
-            KFImage(URL(string: (individualPokemon.sprites.other?.officialArtwork.front_default  ??             individualPokemon.sprites.front_default) ??
+            // Firstly, try get official artwork (every pokemon should have this).
+            // If not, get game sprite, if not, get placeholder
+            KFImage.url(URL(string: (individualPokemon.sprites.other?.officialArtwork.front_default  ??             individualPokemon.sprites.front_default) ??
                     "https://upload.wikimedia.org/wikipedia/commons/3/39/Pokeball.PNG"))
                 .cacheOriginalImage()
                 .resizable()
