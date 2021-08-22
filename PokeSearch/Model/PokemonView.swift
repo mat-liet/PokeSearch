@@ -32,7 +32,7 @@ struct PokemonView: View {
                 HStack {
                     Text(individualPokemon.name.firstUppercased)
                         .foregroundColor(Color.black)
-                        .font(Font.custom("Pokemon Hollow", size: 20))
+                        .font(Font.custom("PKMN RBYGSC", size: 15))
                 }
             })
         })
