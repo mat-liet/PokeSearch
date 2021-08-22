@@ -11,8 +11,8 @@
 		A10D4FC026D2BC220033639D /* PKMN RBYGSC.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A10D4FBF26D2BC220033639D /* PKMN RBYGSC.ttf */; };
 		A10D4FC226D2DE670033639D /* PokemonAbilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10D4FC126D2DE670033639D /* PokemonAbilityView.swift */; };
 		A10D4FC426D2DF150033639D /* PokemonInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10D4FC326D2DF150033639D /* PokemonInformationView.swift */; };
+		A10D4FC626D2F87A0033639D /* PokemonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10D4FC526D2F87A0033639D /* PokemonListView.swift */; };
 		A11C8AD526CECDB000ED6E8E /* PokeSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11C8AD426CECDB000ED6E8E /* PokeSearchApp.swift */; };
-		A11C8AD726CECDB000ED6E8E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11C8AD626CECDB000ED6E8E /* ContentView.swift */; };
 		A11C8AD926CECDB100ED6E8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A11C8AD826CECDB100ED6E8E /* Assets.xcassets */; };
 		A11C8ADC26CECDB100ED6E8E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A11C8ADB26CECDB100ED6E8E /* Preview Assets.xcassets */; };
 		A11C8B0126CECE5700ED6E8E /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11C8B0026CECE5700ED6E8E /* Pokemon.swift */; };
@@ -47,9 +47,9 @@
 		A10D4FBF26D2BC220033639D /* PKMN RBYGSC.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PKMN RBYGSC.ttf"; sourceTree = "<group>"; };
 		A10D4FC126D2DE670033639D /* PokemonAbilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAbilityView.swift; sourceTree = "<group>"; };
 		A10D4FC326D2DF150033639D /* PokemonInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonInformationView.swift; sourceTree = "<group>"; };
+		A10D4FC526D2F87A0033639D /* PokemonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListView.swift; sourceTree = "<group>"; };
 		A11C8AD126CECDB000ED6E8E /* PokeSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A11C8AD426CECDB000ED6E8E /* PokeSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeSearchApp.swift; sourceTree = "<group>"; };
-		A11C8AD626CECDB000ED6E8E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A11C8AD826CECDB100ED6E8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A11C8ADB26CECDB100ED6E8E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A11C8ADD26CECDB100ED6E8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -114,7 +114,6 @@
 				A11C8B0226CECE6000ED6E8E /* API */,
 				A11C8AFF26CECE1E00ED6E8E /* Model */,
 				A11C8AD426CECDB000ED6E8E /* PokeSearchApp.swift */,
-				A11C8AD626CECDB000ED6E8E /* ContentView.swift */,
 				A11C8AD826CECDB100ED6E8E /* Assets.xcassets */,
 				A11C8ADD26CECDB100ED6E8E /* Info.plist */,
 				A11C8ADA26CECDB100ED6E8E /* Preview Content */,
@@ -140,6 +139,7 @@
 				A10D4FBD26D275E80033639D /* PokemonStatsView.swift */,
 				A10D4FC126D2DE670033639D /* PokemonAbilityView.swift */,
 				A10D4FC326D2DF150033639D /* PokemonInformationView.swift */,
+				A10D4FC526D2F87A0033639D /* PokemonListView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -293,8 +293,8 @@
 			files = (
 				A10D4FC226D2DE670033639D /* PokemonAbilityView.swift in Sources */,
 				A10D4FC426D2DF150033639D /* PokemonInformationView.swift in Sources */,
+				A10D4FC626D2F87A0033639D /* PokemonListView.swift in Sources */,
 				A16559C126D18A6D0026B713 /* Search.swift in Sources */,
-				A11C8AD726CECDB000ED6E8E /* ContentView.swift in Sources */,
 				A11C8AD526CECDB000ED6E8E /* PokeSearchApp.swift in Sources */,
 				A11C8B0426CECE8C00ED6E8E /* PokemonAPI.swift in Sources */,
 				A10D4FBE26D275E80033639D /* PokemonStatsView.swift in Sources */,
