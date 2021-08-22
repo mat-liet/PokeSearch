@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/**
+ This is the list view for the Pokemon.
+ */
 struct ContentView: View {
     @StateObject var pokemonController = PokemonViewController()
     @State var searchName: String = ""
@@ -17,20 +20,23 @@ struct ContentView: View {
                     LazyVStack {
                         Search(searchName: $searchName)
                             .padding(.top, 15)
+                        // Filter out the pokemon containing the search word
                         ForEach(pokemonController.pokemon.filter { test in
                             self.searchName.isEmpty ? true : test.name.lowercased().contains(self.searchName.lowercased())
                         }, id: \.self) { pokemon in
                             NavigationLink(destination: PokemonDetailView(pokemon: pokemon)) {
                                 PokemonView(individualPokemon: pokemon)
                                     .onAppear() {
-                                        pokemonController.loadMorePokemon(currentPokemon: pokemon)
+                                        // Load more pokemon
+                                        pokemonController.loadMorePokemon()
                                     }
                             }
 
                         }
                     }
                 }
-                .navigationBarTitle("Pokemon", displayMode: .inline)
+                //Sets the title of the list view
+                .navigationBarTitle("PokeSearch", displayMode: .inline)
             }
         }
 }

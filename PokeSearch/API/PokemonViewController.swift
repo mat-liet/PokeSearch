@@ -16,9 +16,14 @@ class PokemonViewController: ObservableObject {
     @Published var pokemon: [Pokemon] = []
     var pokemonAPI = PokemonAPI()
     
+    // What # of pokemon we are at
     var offset = 0
+    //Flag that decides whether we keep retrieving pokemon from API
     var keepGoing = true
     
+    /**
+     Init method to initialize the first pokemon in the list.
+     */
     init() {
         getPokemon()
     }
@@ -26,7 +31,7 @@ class PokemonViewController: ObservableObject {
     /**
      Function that controls the loading of more pokemon
      */
-    func loadMorePokemon(currentPokemon: Pokemon) {
+    func loadMorePokemon() {
         if keepGoing {
             offset += 20
             getPokemon()

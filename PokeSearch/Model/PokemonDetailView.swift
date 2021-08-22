@@ -11,6 +11,7 @@ import Kingfisher
 /**
  This class displays the Pokemon Details including height, weight and their abilities.
  For the image, get the official artwork, and then if not get the game sprite. Lastly, get a placeholder if it doesnt work.
+ The other sections are all in a VStack. Sections are separated by a Divider()
  */
 struct PokemonDetailView: View {
     let pokemon: Pokemon
@@ -28,6 +29,7 @@ struct PokemonDetailView: View {
                         .cacheOriginalImage()
                         .frame(width: 200, height: 200)
                     Divider()
+                    // MARK: - Pokemon Information
                     VStack(){
                         Spacer()
                             .frame(height: 25)
@@ -50,7 +52,7 @@ struct PokemonDetailView: View {
                     }
                     
                     Divider()
-                    
+                    // MARK: - Pokemon Abilities
                     VStack() {
                         Text("Pokemon Abilities")
                             .font(Font.custom("PKMN RBYGSC", size: 20))
@@ -65,7 +67,7 @@ struct PokemonDetailView: View {
                     }
                     
                     Divider()
-                    
+                    // MARK: - Pokemon Stats
                     VStack() {
                         Spacer()
                             .frame(height: 20)
