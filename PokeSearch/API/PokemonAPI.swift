@@ -7,7 +7,6 @@
 
 import SwiftUI
 import Foundation
-import Combine
 
 /**
  This method will retrieve all of the pokemons using the API call and return an array of them.
