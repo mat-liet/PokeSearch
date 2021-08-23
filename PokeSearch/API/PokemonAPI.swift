@@ -52,7 +52,6 @@ class PokemonAPI {
         guard let url = URL(string: url) else {return}
         
         URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
-                print(url)
                 guard error == nil else {
                     return
                 }
