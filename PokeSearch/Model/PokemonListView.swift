@@ -16,7 +16,7 @@ struct PokemonListView: View {
     @StateObject var pokemonController = PokemonViewController()
     // Variable holding the string used to search pokemon names
     @State var searchName: String = ""
-    // Partially taken from: https://apoorv487.medium.com/pagination-in-swiftui-5a90ea952876
+    // Reference: https://apoorv487.medium.com/pagination-in-swiftui-5a90ea952876
     var body: some View {
         NavigationView {
             ScrollView {
