@@ -24,8 +24,6 @@ In this screenshot, you can see an example of the list of the pokemon:
 
 In this screrenshot, you can see an example of the detail page for a pokemon:
 
-![Screenshot 2021-09-06 at 20 38 09](https://user-images.githubusercontent.com/58524922/132256332-e4165ccf-45ed-4458-882a-3a66d95aca13.png)
-
 In the video below, you can see a short video of the app in action:
 
 https://user-images.githubusercontent.com/58524922/132256824-829f1830-0653-42ff-9232-dcc270311d9d.mov
