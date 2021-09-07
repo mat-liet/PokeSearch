@@ -22,11 +22,11 @@ In this screenshot, you can see an example of the list of the pokemon:
 
 ![Screenshot 2021-09-06 at 20 38 09](https://user-images.githubusercontent.com/58524922/132256387-322d407a-578f-42b4-8b42-d80f4f440f59.png)
 
-In this screrenshot, you can see an example of the detail page for a pokemon:
+In this screenshot, you can see an example of the detail page for a pokemon:
 
 ![Screenshot 2021-09-06 at 20 37 27](https://user-images.githubusercontent.com/58524922/132396257-eaf49e92-c5dc-4378-bc8a-8196286a6289.png)
 
-In the video below, you can see a short video of the app in action:
+In the video below, you can see the app in action:
 
 https://user-images.githubusercontent.com/58524922/132256824-829f1830-0653-42ff-9232-dcc270311d9d.mov
 
